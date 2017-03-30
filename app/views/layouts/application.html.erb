@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LiveOakCustomHomesCom</title>
+    <title>Live Oak Custom Homes - Find Your Neighborhood, Build Your Home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css" rel="stylesheet" />
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
     <%= yield %>
+
+    <script src="https://use.fontawesome.com/3fcb9a3989.js"></script>
   </body>
 </html>

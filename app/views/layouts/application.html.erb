@@ -2,16 +2,52 @@
 <html>
   <head>
     <title>Live Oak Custom Homes - Find Your Neighborhood, Build Your Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="We provide our customers with a full service custom home design experience. We minimize the frustration involved in a traditional building experience and focus on your family's home.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css" rel="stylesheet" />
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
   <body>
+    <header>
+
+      <div id="logo">
+        <a href="/"><%= image_tag "Live-Oak-Custom-Homes-logo.png" %></a>
+      </div>
+
+      <nav>
+        <a href="#" onclick="$('nav .menu').toggle();" id="mobileBtn"><i class="fa fa-bars" aria-hidden="true"></i></a>
+        <div class="menu">
+          <a href="/">HOME</a> <span>|</span>
+          <a href="/about-us/">ABOUT US</a> <span>|</span>
+          <a href="/inspiration/">INSPIRATION</a> <span>|</span>
+          <a href="/design-and-build/">DESIGN AND BUILD</a> <span>|</span>
+          <a href="/contact-us/">CONTACT US</a>
+        </div>
+      </nav>
+
+    </header>
+
     <%= yield %>
 
+    <footer>
+      <div class="menu">
+        <a href="/">HOME</a> |
+        <a href="/about-us/">ABOUT US</a> |
+        <a href="/inspiration/">INSPIRATION</a> |
+        <a href="/design-and-build/">DESIGN AND BUILD</a> |
+        <a href="/contact-us/">CONTACT US</a>
+      </div>
+      <div class="copyright">
+        Copyright 2017 Live Oak Construction, Inc. All Rights Reserved.
+      </div>
+    </footer>
+
     <script src="https://use.fontawesome.com/3fcb9a3989.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
   </body>
 </html>

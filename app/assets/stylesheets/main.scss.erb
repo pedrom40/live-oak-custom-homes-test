@@ -35,6 +35,8 @@ $color-06:#393939; /* text color */
 
 /* global */
 body {margin:0; padding:0; font-size:16px;}
+
+/* welcome & philosophy views */
 section {
   position:relative;
 
@@ -42,12 +44,20 @@ section {
     position:relative;
     height:200px;
     overflow:hidden;
-
-    img {
-      position:absolute;
-      bottom:0;
-    }
+		background-size:cover;
+		background-position:center;
   }
+
+	.desktop {
+		display:none;
+	}
+
+	#welcomePicsRow01, #welcomePicsRow02, #philosophyPicsRow01 {
+		display:none;
+	}
+
+	#welcomeBox01 {background-image:url("<%= asset_path 'welcome-kitchen.jpg' %>");}
+	#philosophyBox01 {background-image:url("<%= asset_path 'our-philosophy-outdoor.jpg' %>");}
 
   .content {
     padding:25px;
@@ -81,6 +91,90 @@ section {
     background:black;
     text-align:center;
   }
+}
+
+@media (min-width:767px){
+
+	.welcome .sliderContainer, .philosophy .sliderContainer {
+		display:none;
+	}
+
+	#welcomeBox01, #philosophyBox01 {
+		width:32.4%;
+	}
+	#welcomeBox01 {
+		float:right;
+		height:439px;
+		margin-left:25px;
+	}
+	#philosophyBox01 {
+		float:left;
+		height:465px;
+		margin-right:25px;
+	}
+
+	.welcome .container, .philosophy .container {
+		padding:0 0 10px 0;
+
+		.row .column {
+
+			&:first-child {
+				padding:0;
+			}
+
+			&:last-child {
+				padding:0;
+			}
+
+		}
+	}
+
+	#welcomePicsRow01, #welcomePicsRow02, #philosophyPicsRow01 {
+		display:block !important;
+	}
+
+	#welcomeBox02 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
+	#welcomeBox03 {background-image:url("<%= asset_path 'home-03.jpg' %>");}
+	#welcomeBox04 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+	#welcomeBox05 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
+	#welcomeBox06 {background-image:url("<%= asset_path 'home-03.jpg' %>");}
+	#welcomeBox07 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+
+	#philosophyBox02 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
+	#philosophyBox03 {background-image:url("<%= asset_path 'home-03.jpg' %>");}
+	#philosophyBox04 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+
+}
+@media (min-width:992px){
+
+	.mobile {
+		display:none !important;
+	}
+	.desktop {
+		display:block !important;
+
+		.imgBox {
+			height:340px !important;
+		}
+
+		.content {
+			margin:100px 20px;
+		}
+
+		#welcomeBox01, #philosophyBox01 {
+			width:initial;
+		}
+		#welcomeBox01 {
+			float:none;
+			margin-left:0;
+		}
+		#philosophyBox01 {
+			float:none;
+			min-height:730px !important;
+			margin-right:0;
+		}
+	}
+
 }
 
 /* header */
@@ -250,19 +344,25 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
 footer {
   padding:15px;
   font-family:$font-02;
-  font-size:1.5em;
+  font-size:1.4em;
   text-align:center;
   color:white;
   border-top:solid 9px $color-04;
   background:$color-03;
 
   a {
-    padding:0 15px;
+    padding:0 10px;
     color:white;
 
     &:hover {
       color:black;
     }
+		&:first-child {
+			padding-left:0;
+		}
+		&:last-child {
+			padding-right:0;
+		}
   }
 }
 @media (min-width:992px){

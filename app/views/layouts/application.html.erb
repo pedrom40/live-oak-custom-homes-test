@@ -17,7 +17,20 @@
 
     <%= render "shared/header" %>
     <%= yield %>
-    <%= render "shared/footer" %>
+
+    <footer>
+      <div class="menu">
+        <%= link_to "HOME", root_path %> <span>|</span>
+        <%= link_to "ABOUT US", about_us_path %> <span>|</span>
+        <%= link_to "INSPIRATION", inspiration_path %> <span>|</span>
+        <%= link_to "DESIGN & BUILD", design_and_build_path %> <span>|</span>
+        <%= link_to "OUR WARRANTY", our_warranty_path %> <span>|</span>
+        <%= link_to "CONTACT US", contact_us_path %>
+      </div>
+      <div class="copyright">
+        Copyright 2017 Live Oak Construction, Inc. All Rights Reserved.
+      </div>
+    </footer>
 
     <script src="https://use.fontawesome.com/3fcb9a3989.js"></script>
   </body>

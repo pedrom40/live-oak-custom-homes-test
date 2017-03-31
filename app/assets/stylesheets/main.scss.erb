@@ -55,7 +55,7 @@ h1 {letter-spacing:1px;}
 	z-index:3;
 }
 
-/* welcome & philosophy views */
+/* welcome view */
 section {
   position:relative;
 
@@ -188,6 +188,28 @@ section {
 
 }
 
+/* our philosophy view */
+section {
+
+	.ourPhilosophy {
+
+		#ourPhilosophyBox01 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+	}
+}
+
+@media (min-width:767px){
+
+	section .ourPhilosophy {
+		.mobile {display:none !important;}
+		.desktop {display:block !important;}
+	}
+
+	#ourPhilosophyBox02 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
+	#ourPhilosophyBox03 {background-image:url("<%= asset_path 'home-03.jpg' %>");}
+	#ourPhilosophyBox03 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+
+}
+
 /* design and build */
 .blackBoxGrid {
 	padding:0;
@@ -286,7 +308,17 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
 			    font-size:0.4em;
 				}
       }
+
       span {display:none;}
+
+			.sub-menu {
+				padding: 15px;
+
+				a {
+					font-size:1.25em !important;
+					border-bottom:none !important;
+				}
+			}
     }
   }
   @media (min-width:767px){
@@ -301,10 +333,14 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
 
       a {
         display:inline;
-        padding:0 10px;
+        padding:0 7px;
         font-family:$font-02;
-        font-size:1.5em;
+        font-size:1.25em;
         border:none;
+
+				i {
+					top:-4px;
+				}
       }
 
       span {
@@ -312,10 +348,28 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
         font-size:1.5em;
       }
 
+			.sub-menu {
+		    position:absolute;
+		    width:100%;
+				padding:2px 0 4px 0;
+				text-align:right;
+		    background:$color-02;
+			}
+
     }
   }
   @media (min-width:992px){
-    nav .menu a {padding:0 15px;}
+    nav .menu {
+			a {
+				padding:0 15px;
+				font-size:1.5em;
+			}
+			.sub-menu {
+				a {
+					font-size:1.5em !important;
+				}
+			}
+		}
   }
 
 /* main slider */
@@ -414,7 +468,7 @@ footer {
   background:$color-03;
 
   a {
-    padding:0 10px;
+    padding:0 8px;
     color:white;
 
     &:hover {
@@ -425,6 +479,10 @@ footer {
 		}
 		&:last-child {
 			padding-right:0;
+		}
+
+		i {
+			display:none !important;
 		}
   }
 }

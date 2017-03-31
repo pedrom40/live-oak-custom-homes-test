@@ -11,3 +11,6 @@ $('.sub-menu').mouseleave(function(){
 	closeSubMenus();
 	$(this).hide();
 });
+
+$('footer a').off('onClick');
+$('footer a').off('onMouseOver');

@@ -1,7 +1,29 @@
 <div class="menu">
-  <%= link_to "HOME",  root_path %> <span>|</span>
-  <%= link_to "ABOUT US",  about_us_path %> <span>|</span>
-  <%= link_to "INSPIRATION",  inspiration_path %> <span>|</span>
-  <%= link_to "DESIGN AND BUILD",  design_and_build_path %> <span>|</span>
-  <%= link_to "CONTACT US",  contact_us_path %>
+  <%= link_to "HOME", root_path %> <span>|</span>
+
+  <a href="#" onClick="showSubMenu('aboutSubMenu');">ABOUT US <i class="fa fa-chevron-down" aria-hidden="true"></i></a> <span>|</span>
+  <div id="aboutSubMenu" class="sub-menu">
+    <%= link_to "Our Philosophy", about_us_our_philosophy_path %> <span>|</span>
+    <%= link_to "Builder's Story", about_us_builders_story_path %> <span>|</span>
+    <%= link_to "Accolades", about_us_accolades_path %>
+  </div>
+
+  <a href="#" onClick="showSubMenu('inspirationSubMenu');">INSPIRATION <i class="fa fa-chevron-down" aria-hidden="true"></i></a> <span>|</span>
+  <div id="inspirationSubMenu" class="sub-menu">
+    <%= link_to "Gallery 01", inspiration_gallery_01_path %> <span>|</span>
+    <%= link_to "Gallery 02", inspiration_gallery_02_path %> <span>|</span>
+    <%= link_to "Gallery 03", inspiration_gallery_03_path %> <span>|</span>
+    <%= link_to "Gallery 04", inspiration_gallery_04_path %>
+  </div>
+
+  <a href="#" onClick="showSubMenu('designAndBuildSubMenu');">DESIGN AND BUILD <i class="fa fa-chevron-down" aria-hidden="true"></i></a> <span>|</span>
+  <div id="designAndBuildSubMenu" class="sub-menu">
+    <%= link_to "Building Process", design_and_build_building_process_path %> <span>|</span>
+    <%= link_to "Series", design_and_build_series_path %> <span>|</span>
+    <%= link_to "Neighborhoods", design_and_build_neighborhoods_path %> <span>|</span>
+    <%= link_to "Frequently Asked Questions", design_and_build_frequently_asked_questions_path %>
+  </div>
+
+  <%= link_to "OUR WARRANTY", our_warranty_path %> <span>|</span>
+  <%= link_to "CONTACT US", contact_us_path %>
 </div>

@@ -6,10 +6,46 @@ class StaticPagesController < ApplicationController
   def aboutUs
   end
 
+    def ourPhilosophy
+    end
+
+    def buildersStory
+    end
+
+    def accolades
+    end
+
   def inspiration
   end
 
+    def gallery01
+    end
+
+    def gallery02
+    end
+
+    def gallery03
+    end
+
+    def gallery04
+    end
+
   def designAndBuild
+  end
+
+    def buildingProcess
+    end
+
+    def series
+    end
+
+    def neighborhoods
+    end
+
+    def frequentlyAskedQuestions
+    end
+
+  def warranty
   end
 
   def contactUs

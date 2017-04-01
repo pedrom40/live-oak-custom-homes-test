@@ -33,11 +33,15 @@ $color-04:#92661e; /* darker tan/brown */
 $color-05:#bcbdc0; /* light grey */
 $color-06:#393939; /* text color */
 
+
 /* global */
 body {margin:0; padding:0; font-size:16px;}
-h1 {letter-spacing:1px;}
+h1, h3 {letter-spacing:1px;}
+h3 {font-family:$font-01; color:$color-06;}
+ul {font-family:$font-03; margin-left:25px;}
+	li {margin:0; color:$color-06;}
 .sub-menu {display:none;}
-.desktop {display:none;}
+.tablet, .desktop {display:none;}
 @media (min-width:992px){
 	.mobile {
 		display:none !important;
@@ -54,6 +58,7 @@ h1 {letter-spacing:1px;}
 	background:black;
 	z-index:3;
 }
+
 
 /* welcome view */
 section {
@@ -107,7 +112,6 @@ section {
     text-align:center;
   }
 }
-
 @media (min-width:767px){
 
 	.welcome .sliderContainer, .philosophy .sliderContainer {
@@ -188,14 +192,16 @@ section {
 
 }
 
+
 /* our philosophy view */
 #ourPhilosophyBox01 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
-
 @media (min-width:767px){
 
-	section .ourPhilosophy {
-		.mobile {display:none !important;}
-		.desktop {display:block !important;}
+	section.ourPhilosophy div.mobile {display:none !important;}
+	section.ourPhilosophy div.desktop {display:block !important;}
+
+	#ourPhilosophyBox01 {
+		height:482px !important;
 	}
 
 	#ourPhilosophyBox02 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
@@ -203,6 +209,67 @@ section {
 	#ourPhilosophyBox04 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
 
 }
+@media (min-width:992px){
+
+	#ourPhilosophyBox01 {
+		height:630px !important;
+	}
+
+}
+
+
+/* builders story view */
+#buildersStoryBox01 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+@media (min-width:767px){
+
+	section.buildersStory div.mobile {display:none !important;}
+	section.buildersStory div.desktop {display:block !important;}
+
+	#buildersStoryBox01 {
+		height:802px !important;
+	}
+
+	#buildersStoryBox02 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
+	#buildersStoryBox03 {background-image:url("<%= asset_path 'home-03.jpg' %>");}
+	#buildersStoryBox04 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+
+}
+@media (min-width:992px){
+
+	#buildersStoryBox01 {
+		height:876px !important;
+	}
+
+}
+
+
+/* accolades view */
+#accoladesBox01 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+#accoladesBox02 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
+#accoladesBox03 {background-image:url("<%= asset_path 'home-03.jpg' %>");}
+@media (min-width:767px){
+
+	section.accolades {margin-right:0 !important;}
+	section.accolades div.mobile {display:none !important;}
+	section.accolades div.tablet {display:block !important;}
+		section.accolades div.tablet .column-33 .imgBox {margin-bottom:20px;}
+
+	#accoladesBox04 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+	#accoladesBox05 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
+	#accoladesBox06 {background-image:url("<%= asset_path 'home-03.jpg' %>");}
+	#accoladesBox07 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+
+}
+@media (min-width:992px){
+
+	section.accolades div.tablet {display:none !important;}
+
+	#accoladesBox01 {margin-bottom:20px;}
+	#accoladesBox03 {height:700px !important;}
+	#accoladesBox04 {margin-top:20px;}
+
+}
+
 
 /* design and build */
 .blackBoxGrid {
@@ -260,6 +327,7 @@ section {
 	}
 
 }
+
 
 /* header */
 header {height:62px; color:white; border-bottom:solid 9px $color-02; background:$color-01;}
@@ -366,6 +434,7 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
 		}
   }
 
+
 /* main slider */
 .mainSlider {
   position:relative;
@@ -392,6 +461,7 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
     }
   }
 }
+
 
 /* sliders */
 .rslides {
@@ -450,6 +520,7 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
   background-position:right top;
   right:0;
 }
+
 
 /* footer */
 footer {

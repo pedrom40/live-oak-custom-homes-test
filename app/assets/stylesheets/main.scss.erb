@@ -254,7 +254,9 @@ section {
 	section.accolades div.tablet {display:block !important;}
 		section.accolades div.tablet .column-33 .imgBox {margin-bottom:20px;}
 
-	#accoladesBox04 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+	#accoladesBox02 {height:500px;}
+
+	#accoladesBox04 {height:610px; background-image:url("<%= asset_path 'home-01.jpg' %>");}
 	#accoladesBox05 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
 	#accoladesBox06 {background-image:url("<%= asset_path 'home-03.jpg' %>");}
 	#accoladesBox07 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
@@ -263,10 +265,18 @@ section {
 @media (min-width:992px){
 
 	section.accolades div.tablet {display:none !important;}
+	section.accolades div.desktop .content {margin:100px 20px 10px 20px;}
+
+	#accoladesBox08 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
+	#accoladesBox09 {background-image:url("<%= asset_path 'home-03.jpg' %>");}
+	#accoladesBox10 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
 
 	#accoladesBox01 {margin-bottom:20px;}
 	#accoladesBox03 {height:700px !important;}
-	#accoladesBox04 {margin-top:20px;}
+	#accoladesBox04 {margin:20px 0;}
+
+	#accoladesBox06 {margin-bottom:20px;}
+	#accoladesBox05 {height:700px !important;}
 
 }
 

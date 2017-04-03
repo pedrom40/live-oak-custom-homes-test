@@ -16,7 +16,13 @@ Rails.application.routes.draw do
 
   get 'design-and-build',                             to: 'static_pages#designAndBuild'
   get 'design-and-build/building-process',            to: 'static_pages#buildingProcess'
+
   get 'design-and-build/series',                      to: 'static_pages#series'
+  get 'design-and-build/series/premier',              to: 'static_pages#premierSeries'
+  get 'design-and-build/series/classic',              to: 'static_pages#classicSeries'
+  get 'design-and-build/series/lago',                 to: 'static_pages#lagoSeries'
+  get 'design-and-build/series/signature',            to: 'static_pages#signatureSeries'
+
   get 'design-and-build/neighborhoods',               to: 'static_pages#neighborhoods'
   get 'design-and-build/frequently-asked-questions',  to: 'static_pages#frequentlyAskedQuestions'
 

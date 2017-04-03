@@ -39,6 +39,18 @@ class StaticPagesController < ApplicationController
     def series
     end
 
+      def premierSeries
+      end
+
+      def classicSeries
+      end
+
+      def lagoSeries
+      end
+
+      def signatureSeries
+      end
+
     def neighborhoods
     end
 

@@ -1,0 +1,26 @@
+<section>
+  <div class="content">
+
+    <h1>MESSAGE SENT</h1>
+
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @contact.name %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @contact.email %>
+    </p>
+
+    <p>
+      <strong>Comments:</strong>
+      <%= @contact.comments %>
+    </p>
+
+    <%= link_to 'Send Another Message', new_contact_path %>
+
+  </div>
+</section>

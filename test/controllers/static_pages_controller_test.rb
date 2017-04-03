@@ -99,7 +99,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get ContactUs" do
-    get contact_us_path
+    get new_contact_path
     assert_response :success
     assert_select "title", "Live Oak Custom Homes - Find Your Neighborhood, Build Your Home"
   end

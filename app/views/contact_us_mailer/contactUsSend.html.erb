@@ -1,0 +1,11 @@
+<h1><%= @contact.name %> sent a message:</h1>
+<p>
+  <strong>Name:</strong> <%= @contact.name %><br>
+  <strong>Email:</strong> <%= @contact.email %>
+</p>
+<p>
+  <%= @contact.comments %>
+</p>
+<p>
+  This message came from the form on the following page: <%= @url %>.
+</p>

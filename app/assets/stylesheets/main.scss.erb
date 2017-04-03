@@ -32,11 +32,12 @@ $color-03:#b97f0e; /* tan/brown */
 $color-04:#92661e; /* darker tan/brown */
 $color-05:#bcbdc0; /* light grey */
 $color-06:#393939; /* text color */
-
+$formBg:#ebebeb;
 
 /* global */
 body {margin:0; padding:0; font-size:16px;}
-h1, h3 {
+section a {color:$color-01 !important;}
+h1, h3, h5 {
 	font-family:$font-01;
 	color:black;
 	letter-spacing:1px;
@@ -52,6 +53,21 @@ ul {font-family:$font-03; margin-left:25px;}
 	li {margin:0; color:$color-06;}
 .sub-menu {display:none;}
 .tablet, .desktop {display:none;}
+form {
+	font-family:$font-03;
+	padding:25px;
+	background-color:$formBg;
+
+	input, textarea {
+		border-radius:0 !important;
+		background-color:white !important;
+	}
+	input[type=submit]{
+		width:100%;
+		border:none;
+		background-color:$color-01 !important;
+	}
+}
 @media (min-width:992px){
 	.mobile {
 		display:none !important;
@@ -69,6 +85,9 @@ ul {font-family:$font-03; margin-left:25px;}
 	z-index:3;
 }
 
+/* contact view */
+#contactUsBox01 {background-image:url("<%= asset_path 'home-01.jpg' %>");}
+#contactUsBox02 {background-image:url("<%= asset_path 'home-02.jpg' %>");}
 
 /* gallery view */
 #galleryBox01 {background-image:url("<%= asset_path 'home-01.jpg' %>");}

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contacts
   root 'static_pages#welcome'
 
   get 'about-us',                                     to: 'static_pages#aboutUs'
@@ -20,6 +21,6 @@ Rails.application.routes.draw do
   get 'design-and-build/frequently-asked-questions',  to: 'static_pages#frequentlyAskedQuestions'
 
   get 'our-warranty',                                 to: 'static_pages#warranty'
-  get 'contact-us',                                   to: 'static_pages#contactUs'
+  get 'contact-us',                                   to: 'contacts#new'
 
 end

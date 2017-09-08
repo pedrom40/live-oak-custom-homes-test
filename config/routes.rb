@@ -8,11 +8,7 @@ Rails.application.routes.draw do
   get 'about-us/builders-story',                      to: 'static_pages#buildersStory'
   get 'about-us/accolades',                           to: 'static_pages#accolades'
 
-  get 'inspiration',                                  to: 'static_pages#inspiration'
-  get 'inspiration/gallery-01',                       to: 'static_pages#gallery01'
-  get 'inspiration/gallery-02',                       to: 'static_pages#gallery02'
-  get 'inspiration/gallery-03',                       to: 'static_pages#gallery03'
-  get 'inspiration/gallery-04',                       to: 'static_pages#gallery04'
+  get 'inspiration',                                  to: 'static_pages#gallery01'
 
   get 'design-and-build',                             to: 'static_pages#designAndBuild'
   get 'design-and-build/building-process',            to: 'static_pages#buildingProcess'

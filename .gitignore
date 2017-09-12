@@ -13,6 +13,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+app/assets/images/desktop.ini
 
 # Ignore Byebug command history file.
 .byebug_history

@@ -7,10 +7,5 @@ function showSubMenu(menu){
 	$('#'+menu).css('z-index', 999);
 }
 
-$('.sub-menu').mouseleave(function(){
-	closeSubMenus();
-	$(this).hide();
-});
-
 $('footer a').off('onClick');
 $('footer a').off('onMouseOver');

@@ -288,7 +288,7 @@ section {
 
 /* header */
 header {height:62px; color:white; border-bottom:solid 9px $color-02; background:$color-01;}
-  #logo {position:absolute; top:5px; left:25px;}
+  #logo {position:absolute; top:5px; left:25px; z-index:1000;}
   nav {
     width:100%;
 
@@ -308,7 +308,7 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
       width:100%;
       text-align:left;
       background:$color-02;
-      z-index:999;
+      z-index:888;
 
       a {
         display:block;
@@ -369,6 +369,7 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
 			.sub-menu {
 		    position:absolute;
 		    width:100%;
+				margin-top:11px;
 				padding:2px 0 4px 0;
 				text-align:right;
 		    background:$color-02;

@@ -42,11 +42,12 @@ section a {color:$color-01 !important;}
 h1, h2, h3, h4, h5 {
 	font-family:$font-01;
 	color:$color-01;
+	margin-bottom:0;
 	letter-spacing:1px;
 
 	small {
 		display:block;
-		font-size:0.5em;
+		font-size:0.4em;
 		letter-spacing:3px;
 	}
 }
@@ -87,7 +88,10 @@ form {
 	z-index:3;
 }
 .logo-box {margin-top:25px;}
-
+.bg-img {
+	background-size:cover;
+	background-position:center;
+}
 
 /* contact view */
 @media (min-width:767px){
@@ -145,6 +149,7 @@ section {
     p {
       font-family:$font-03;
       color:$color-06;
+			line-height:18px;
     }
   }
 }
@@ -188,16 +193,13 @@ section {
 		}
 
 		.content {
-			margin:100px 20px;
+			margin:100px 40px;
 		}
 
 		.column.column-67 .row .column .imgBox {
 			height:340px !important;
 		}
 
-		#philosophyBox01 {
-			min-height:1008px !important;
-		}
 	}
 }
 
@@ -406,21 +408,21 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
 
     h1 {
       position:relative;
-      top:37%;
+      top:33%;
       margin:0;
       padding:0;
       font-family:$font-01;
       font-size:2.2em;
       text-align:center;
       line-height:0.7em;
-      letter-spacing:1px;
+      letter-spacing:2px;
       color:white;
     }
   }
 }
 @media (min-width:767px){
 	.mainSlider .heading h1 {
-		font-size:4em;
+		font-size:6em;
 	}
 }
 
@@ -491,6 +493,7 @@ header {height:62px; color:white; border-bottom:solid 9px $color-02; background:
 
 /* footer */
 footer {
+	margin-top:10px;
   padding:15px;
   font-family:$font-02;
   font-size:1.4em;

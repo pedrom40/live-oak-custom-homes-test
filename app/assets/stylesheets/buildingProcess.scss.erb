@@ -1,20 +1,37 @@
+.blackBoxGrid {
+
+	.buildingProcess, .buildingLot {
+		height:initial !important;
+		margin:10px 0;
+		padding:150px 250px !important;
+	}
+	.buildingProcess {background-image:url("<%= image_url 'building-process-1600px-01.jpg' %>");}
+	.buildingLot {background-image:url("<%= image_url 'building-process-600px-05.jpg' %>");}
+
+}
+
 @media (min-width:767px){
 
-	#buildingProcessBox01 {background-image:url("<%= asset_path 'liveoak-building-process-722px-1.jpg' %>");}
-	#buildingProcessBox02 {background-image:url("<%= asset_path 'liveoakcustomhomes-buildingprocess-600px-1.jpg' %>");}
-	#buildingProcessBox03 {background-image:url("<%= asset_path 'liveoakcustomhomes-buildingprocess-600px-3.jpg' %>");}
+	#buildingProcessBox01 {background-image:url("<%= image_url 'building-process-1240px-02.jpg' %>");}
+	#buildingProcessBox02 {background-image:url("<%= image_url 'building-process-1240px-03.jpg' %>");}
+	#buildingProcessBox03 {background-image:url("<%= image_url 'building-process-1240px-04.jpg' %>");}
+
+	.buildingLot {background-image:url("<%= image_url 'building-process-1240px-05.jpg' %>") !important;}
+
 }
 @media (min-width:992px){
 
 	.blackBoxGrid .column.buildingProcess h1 {margin-top:48px;}
 
 	#buildingProcessBox01, #buildingProcessBox02 {
-		height:350px;
+		height:525px !important;
 		margin:0 0 10px 0;
 	}
 
-	#buildingProcessBox01 {background-image:url("<%= asset_path 'liveoak-building-process-722px-1.jpg' %>"); height:550px !important;}
-	#buildingProcessBox02 {background-image:url("<%= asset_path 'liveoakcustomhomes-buildingprocess-1600px-1.jpg' %>"); height:550px !important;}
-	#buildingProcessBox03 {background-image:url("<%= asset_path 'liveoakcustomhomes-buildingprocess-1600px-3.jpg' %>"); height:550px !important;}
+	#buildingProcessBox01 {background-image:url("<%= image_url 'building-process-1600px-02.jpg' %>");}
+	#buildingProcessBox02 {background-image:url("<%= image_url 'building-process-1600px-03.jpg' %>");}
+	#buildingProcessBox03 {background-image:url("<%= image_url 'building-process-1240px-04.jpg' %>");}
+
+	.buildingLot {background-image:url("<%= image_url 'building-process-1600px-05.jpg' %>") !important;}
 
 }

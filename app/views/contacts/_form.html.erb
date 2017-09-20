@@ -1,7 +1,5 @@
 <%= form_for(contact) do |f| %>
 
-  <h3>EMAIL US:</h3>
-
   <% if contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
@@ -14,19 +12,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, required: 'true' %>
+  <div class="row">
+    <div class="column">
+      <div class="field">
+        <%= f.label :name, class:'hide' %>
+        <%= f.text_field :name, required: 'true', placeholder:'Name' %>
+      </div>
+    </div>
+    <div class="column">
+      <div class="field">
+        <%= f.label :email, class:'hide' %>
+        <%= email_field('contact', 'email', required: 'true', placeholder:'Email') %>
+      </div>
+    </div>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= email_field('contact', 'email', required: 'true') %>
-  </div>
-
-  <div class="field">
-    <%= f.label :comments %>
-    <%= f.text_area :comments, required: 'true' %>
+    <%= f.label :comments, class:'hide' %>
+    <%= f.text_area :comments, required: 'true', placeholder:'Message' %>
   </div>
 
   <div class="actions">

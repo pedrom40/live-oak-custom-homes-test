@@ -33,7 +33,6 @@ $color-03:#b97f0e; /* tan/brown */
 $color-04:#92661e; /* darker tan/brown */
 $color-05:#bcbdc0; /* light grey */
 $color-06:#393939; /* text color */
-$formBg:#ebebeb;
 
 
 /* global */
@@ -63,14 +62,15 @@ ul {font-family:$font-03; margin-left:25px;}
 .tablet, .desktop {display:none;}
 form {
 	font-family:$font-03;
-	padding:25px;
-	background-color:$formBg;
+	margin-bottom:0;
 
 	input, textarea {
+		font-family:$font-03;
 		border-radius:0 !important;
 		background-color:white !important;
 	}
 	input[type=submit]{
+		font-family:$font-03;
 		width:100%;
 		border:none;
 		background-color:$color-01 !important;
@@ -110,6 +110,23 @@ form {
 	list-style:none;
 	margin:-10px 0 30px 0;
 }
+.dash-list {
+	font-family:$font-01;
+	list-style-type:none;
+	margin-left:12px;
+
+	li {
+		text-indent:-12px;
+	}
+	
+	li::before {
+		content:'- ';
+		text-indent:-5px;
+	}
+}
+.hide {
+	display:none;
+}
 .cut-top {
 	margin-top:0;
 }
@@ -118,9 +135,6 @@ form {
 }
 
 /* contact view */
-@media (min-width:767px){
-	form {height:525px;}
-}
 @media (min-height:992px){
 	section.contactUs div.desktop div.content {margin:0;}
 }
@@ -150,7 +164,7 @@ section {
 		background-position:center;
   }
 
-  .content, .content-small {
+  .content, .content-small, .content-large {
     padding:25px;
 
 			ul.maroon {
@@ -176,6 +190,7 @@ section {
 			line-height:18px;
     }
   }
+
 }
 .sliderContainer {
   position:relative;
@@ -221,6 +236,9 @@ section {
 		}
 		.content-small {
 			margin:25px;
+		}
+		.content-large {
+			margin:80px 115px;
 		}
 
 		.column.column-67 .row .column .imgBox {
@@ -288,7 +306,7 @@ section {
 }
 @media (min-width:767px){
 
-	.buildingProcess, .aboutPhilosophy, .gallery01 {
+	.aboutPhilosophy, .gallery01 {
 		margin-right:10px !important;
     margin-bottom:10px !important;
 	}
